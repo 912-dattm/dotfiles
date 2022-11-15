@@ -1,1 +1,1 @@
---vim.cmd([[colorscheme aura-dark]])
+vim.cmd("colorscheme aura")

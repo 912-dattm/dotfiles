@@ -74,22 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  LuaSnip = {
-    loaded = true,
-    path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/LuaSnip",
-    url = "https://github.com/L3MON4D3/LuaSnip"
-  },
-  MatchTagAlways = {
-    loaded = true,
-    path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/MatchTagAlways",
-    url = "https://github.com/Valloric/MatchTagAlways"
-  },
-  ["aura-theme"] = {
-    config = { "\27LJ\2\n¾\2\0\0\3\0\b\0\0256\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\0016\0\0\0009\0\1\0'\2\4\0B\0\2\0016\0\0\0009\0\1\0'\2\5\0B\0\2\0016\0\0\0009\0\1\0'\2\6\0B\0\2\0016\0\0\0009\0\1\0'\2\a\0B\0\2\1K\0\1\0)hi TabLine guifg=white guibg=#3d375e%hi Visual guibg=#3d375e gui=none,hi TelescopePromptCounter guifg=#61ffca'hi TelescopeMatching guifg=#ffca85(hi TelescopeSelection guibg=#3d375e\26colorscheme aura-dark\bcmd\bvim\0" },
-    loaded = true,
-    path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/aura-theme/packages/neovim",
-    url = "https://github.com/baliestri/aura-theme"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -125,6 +109,16 @@ _G.packer_plugins = {
     path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  markid = {
+    loaded = true,
+    path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/markid",
+    url = "https://github.com/david-kunz/markid"
+  },
+  matchtagalways = {
+    loaded = true,
+    path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/matchtagalways",
+    url = "https://github.com/valloric/matchtagalways"
+  },
   ["mini.nvim"] = {
     loaded = true,
     path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/mini.nvim",
@@ -159,6 +153,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,
@@ -200,6 +199,11 @@ _G.packer_plugins = {
     path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  playground = {
+    loaded = true,
+    path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -220,15 +224,15 @@ _G.packer_plugins = {
     path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  theme = {
+    loaded = true,
+    path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/theme",
+    url = "/Users/dattm/.config/nvim/theme"
+  },
   ["trouble.nvim"] = {
     loaded = true,
     path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
-  },
-  ["vim-polyglot"] = {
-    loaded = true,
-    path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/vim-polyglot",
-    url = "https://github.com/sheerun/vim-polyglot"
   },
   ["vim-surround"] = {
     loaded = true,
@@ -245,6 +249,11 @@ _G.packer_plugins = {
     path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
   },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
+  },
   ["zen-mode.nvim"] = {
     loaded = true,
     path = "/Users/dattm/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
@@ -253,14 +262,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Runtimepath customization
-time([[Runtimepath customization]], true)
-vim.o.runtimepath = vim.o.runtimepath .. ",/Users/dattm/.local/share/nvim/site/pack/packer/start/aura-theme/packages/neovim"
-time([[Runtimepath customization]], false)
--- Config for: aura-theme
-time([[Config for aura-theme]], true)
-try_loadstring("\27LJ\2\n¾\2\0\0\3\0\b\0\0256\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\0016\0\0\0009\0\1\0'\2\4\0B\0\2\0016\0\0\0009\0\1\0'\2\5\0B\0\2\0016\0\0\0009\0\1\0'\2\6\0B\0\2\0016\0\0\0009\0\1\0'\2\a\0B\0\2\1K\0\1\0)hi TabLine guifg=white guibg=#3d375e%hi Visual guibg=#3d375e gui=none,hi TelescopePromptCounter guifg=#61ffca'hi TelescopeMatching guifg=#ffca85(hi TelescopeSelection guibg=#3d375e\26colorscheme aura-dark\bcmd\bvim\0", "config", "aura-theme")
-time([[Config for aura-theme]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

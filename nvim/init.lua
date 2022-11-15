@@ -6,13 +6,12 @@ require("telescope-config")
 
 require("nvim-treesitter-config")
 
---require("colorschemes-config")
+require("colorschemes-config")
 require("matchtagalways-config")
 require("auto-pairs-config")
 require("hop-config")
 require("neoscroll-config")
 require("taboo")
-require("polyglot-config")
 require("mini-config")
 require("zenmode-config")
 
@@ -24,7 +23,7 @@ require("trouble-config")
 require("impatient-config")
 
 -- require('dashboard-config')
--- require('colorizer-config')
+require("colorizer-config")
 --require('coc-nvim-config')
 
 require("nerdtree-config")

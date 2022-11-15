@@ -11,7 +11,7 @@ return require("packer").startup(function(use)
 
 	-- other
 	use("windwp/nvim-autopairs")
-	use("Valloric/MatchTagAlways")
+	use("valloric/matchtagalways")
 	use("tribela/vim-transparent")
 	use({
 		"phaazon/hop.nvim",
@@ -22,13 +22,21 @@ return require("packer").startup(function(use)
 	use("preservim/nerdcommenter")
 	use("karb94/neoscroll.nvim")
 	use("tpope/vim-surround")
-	use("sheerun/vim-polyglot")
 	use("lewis6991/impatient.nvim")
 	use({ "echasnovski/mini.nvim", branch = "stable" })
 	use("folke/zen-mode.nvim")
+	use("norcalli/nvim-colorizer.lua")
+	--use({
+	--"Djancyp/custom-theme.nvim",
+	--config = function()
+	--require("custom-theme").setup()
+	--end,
+	--})
 
 	-- treesitter
-	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	use({ "nvim-treesitter/nvim-treesitter", run = ":tsupdate" })
+	use("david-kunz/markid")
+	use("nvim-treesitter/playground")
 	use({ "windwp/nvim-ts-autotag" })
 
 	-- cmp
@@ -45,7 +53,7 @@ return require("packer").startup(function(use)
 
 	-- lsp
 	use("jose-elias-alvarez/nvim-lsp-ts-utils")
-	use("neovim/nvim-lspconfig") -- enable LSP
+	use("neovim/nvim-lspconfig") -- enable lsp
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
@@ -64,17 +72,6 @@ return require("packer").startup(function(use)
 	})
 
 	--theme
-	use({
-		"baliestri/aura-theme",
-		branch = "feat/neovim-port",
-		rtp = "packages/neovim",
-		config = function()
-			vim.cmd("colorscheme aura-dark")
-			vim.cmd([[hi TelescopeSelection guibg=#3d375e]])
-			vim.cmd([[hi TelescopeMatching guifg=#ffca85]])
-			vim.cmd([[hi TelescopePromptCounter guifg=#61ffca]])
-			vim.cmd([[hi Visual guibg=#3d375e gui=none]])
-			vim.cmd([[hi TabLine guifg=white guibg=#3d375e]])
-		end,
-	})
+	use("~/.config/nvim/theme")
+	use("Mofiqul/vscode.nvim")
 end)

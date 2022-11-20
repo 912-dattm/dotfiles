@@ -302,6 +302,19 @@ function M.groups(palette)
 		--typescript
 		typescriptImport = { fg = palette.accent1 },
 		typescriptIdentifierName = { fg = palette.accent7 },
+
+		--css
+		cssProp = { fg = palette.accent6, bg = "NONE" },
+		cssPseudoClass = { fg = palette.accent6, bg = "NONE" },
+		cssPseudoClassId = { fg = palette.accent6, bg = "NONE" },
+		cssNoise = { fg = palette.accent6, bg = "NONE" },
+
+		--less
+		lessCssAttribute = { fg = palette.accent1, bg = "NONE" },
+		lessVariable = { fg = palette.accent7, bg = "NONE" },
+		lessDefinition = { fg = palette.accent7, bg = "NONE" },
+		lessAmpersand = { fg = palette.accent6, bg = "NONE" },
+		lessProperty = { fg = palette.accent6, bg = "NONE" },
 	}
 end
 

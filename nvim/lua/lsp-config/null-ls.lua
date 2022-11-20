@@ -11,6 +11,9 @@ null_ls.setup({
 		--null_ls.builtins.diagnostics.eslint_d,
 		--null_ls.builtins.code_actions.eslint_d,
 		formatting.prettierd.with({
+			extra_args = {
+				"--tab-width=4",
+			},
 			filetypes = {
 				"javascript",
 				"javascriptreact",

@@ -1,30 +1,15 @@
-require("settings")
-require("mappings")
+require('craftzdog.base')
+require('craftzdog.highlights')
+require('craftzdog.maps')
+require('craftzdog.plugins')
 
-require("lualine-config")
-require("telescope-config")
+local has = vim.fn.has
+local is_mac = has "macunix"
+local is_win = has "win32"
 
-require("nvim-treesitter-config")
-
-require("colorschemes-config")
-require("matchtagalways-config")
-require("auto-pairs-config")
-require("hop-config")
-require("neoscroll-config")
-require("taboo")
-require("mini-config")
-require("zenmode-config")
-
---lsp
-require("lsp-config")
-require("trouble-config")
-
---performance
-require("impatient-config")
-
--- require('dashboard-config')
-require("colorizer-config")
---require('coc-nvim-config')
-
-require("nerdtree-config")
-require("packer-config")
+if is_mac then
+  require('craftzdog.macos')
+end
+if is_win then
+  require('craftzdog.windows')
+end

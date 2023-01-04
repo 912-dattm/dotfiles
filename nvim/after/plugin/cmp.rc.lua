@@ -42,8 +42,8 @@ cmp.setup({
 		}),
 	}),
 	sources = cmp.config.sources({
-		{ name = 'nvim_lsp' },
-		{ name = 'buffer' },
+		{ name = 'nvim_lsp', score = 3 },
+		{ name = 'buffer', score = 0 },
 	}),
 	formatting = {
 		format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })

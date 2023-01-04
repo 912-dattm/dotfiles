@@ -18,6 +18,7 @@ packer.startup(function(use)
 
 	use({ "echasnovski/mini.nvim", branch = "stable" })
 	use 'lewis6991/impatient.nvim'
+	use("nathom/filetype.nvim")
 	use({
 		"phaazon/hop.nvim",
 		branch = "v1", -- optional but strongly recommended
@@ -25,11 +26,13 @@ packer.startup(function(use)
 	use("valloric/matchtagalways")
 	use("karb94/neoscroll.nvim")
 	use("preservim/nerdcommenter")
-
+	use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+	use "MunifTanjim/prettier.nvim"
 
 
 	use 'nvim-lualine/lualine.nvim' -- Statusline
 	use 'nvim-lua/plenary.nvim' -- Common utilities
+	use 'jose-elias-alvarez/nvim-lsp-ts-utils'
 	use 'onsails/lspkind-nvim' -- vscode-like pictograms
 	use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
 	use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
@@ -45,20 +48,18 @@ packer.startup(function(use)
 		'nvim-treesitter/nvim-treesitter',
 		run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
 	}
+	use 'nvim-treesitter/playground'
+	use 'windwp/nvim-ts-autotag'
 	use 'kyazdani42/nvim-web-devicons' -- File icons
 	use 'nvim-telescope/telescope.nvim'
 	use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
 	use 'windwp/nvim-autopairs'
-	use 'windwp/nvim-ts-autotag'
 	use 'norcalli/nvim-colorizer.lua'
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = function() vim.fn["mkdp#util#install"]() end,
-	})
 	use 'akinsho/nvim-bufferline.lua'
-	-- use 'github/copilot.vim'
+	use "b0o/incline.nvim"
 
 	use 'lewis6991/gitsigns.nvim'
 	use 'dinhhuy258/git.nvim' -- For git blame & browse
+
 	use '~/.config/nvim/theme'
 end)

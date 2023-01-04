@@ -22,6 +22,13 @@ end
 local on_attach = function(client, bufnr)
 	local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
+	if client.name == "tsserver" then
+		client.server_capabilities.documentFormattingProvider = false
+		local ts_utils = require("nvim-lsp-ts-utils")
+		ts_utils.setup({})
+		ts_utils.setup_client(client)
+	end
+
 	-- Mappings.
 	local opts = { noremap = true, silent = true }
 
@@ -35,7 +42,7 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap("n", "[g", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
 	buf_set_keymap("n", "]g", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
 	buf_set_keymap("n", "<Leader>o", ":TSLspOrganize<CR>", opts)
-	buf_set_keymap('n', '<Leader>p', '<cmd>lua vim.lsp.buf.format { async = true }<CR>', opts)
+	buf_set_keymap('n', '<Leader>p', '<cmd>:Prettier<CR>', opts)
 
 	buf_set_keymap(
 		"n",

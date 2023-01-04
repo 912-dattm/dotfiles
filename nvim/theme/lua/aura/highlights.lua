@@ -61,9 +61,9 @@ function M.groups(palette)
 		StatusLineTermNC = { fg = palette.accent8 },
 
 		Directory = { fg = palette.accent2 },
-		DiffAdd = { fg = palette.accent0, bg = palette.accent4 },
-		DiffChange = { fg = palette.accent3 },
-		DiffDelete = { fg = palette.accent5 },
+		DiffAdd = { bg = "#2D4B33" },
+		DiffChange = { bg = "#474A49" },
+		DiffDelete = { bg = "#5C151A" },
 		DiffText = { fg = palette.accent8 },
 
 		ErrorMsg = { fg = palette.accent5 },
@@ -315,6 +315,8 @@ function M.groups(palette)
 		lessDefinition = { fg = palette.accent7, bg = "NONE" },
 		lessAmpersand = { fg = palette.accent6, bg = "NONE" },
 		lessProperty = { fg = palette.accent6, bg = "NONE" },
+
+		GitSignsCurrentLineBlame = { fg = palette.accent8 },
 	}
 end
 

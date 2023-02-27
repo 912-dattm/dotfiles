@@ -61,9 +61,9 @@ function M.groups(palette)
 		StatusLineTermNC = { fg = palette.accent8 },
 
 		Directory = { fg = palette.accent2 },
-		DiffAdd = { bg = "#2D4B33" },
-		DiffChange = { bg = "#474A49" },
-		DiffDelete = { bg = "#5C151A" },
+		DiffAdd = { fg = palette.accent0, bg = palette.accent4 },
+		DiffChange = { fg = palette.accent3 },
+		DiffDelete = { fg = palette.accent5 },
 		DiffText = { fg = palette.accent8 },
 
 		ErrorMsg = { fg = palette.accent5 },
@@ -104,6 +104,8 @@ function M.groups(palette)
 		["@parameter.reference"] = { fg = palette.accent7 },
 		["@variable"] = { fg = palette.accent7 },
 		["@variable.builtin"] = { fg = palette.accent7 },
+		["@function.builtin"] = { fg = palette.accent3, bg = "NONE" },
+		["@function"] = { fg = palette.accent3, bg = "NONE" },
 		TSError = { fg = palette.accent5 },
 		TSPunctDelimiter = { fg = palette.accent7 },
 		TSPunctBracket = { fg = palette.accent7 },
@@ -316,7 +318,8 @@ function M.groups(palette)
 		lessAmpersand = { fg = palette.accent6, bg = "NONE" },
 		lessProperty = { fg = palette.accent6, bg = "NONE" },
 
-		GitSignsCurrentLineBlame = { fg = palette.accent8 },
+		--matchtagalways
+		MatchTag = { fg = palette.accent3, bg = "NONE" },
 	}
 end
 

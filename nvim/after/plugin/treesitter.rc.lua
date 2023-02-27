@@ -11,6 +11,7 @@ ts.setup {
 		disable = {},
 	},
 	ensure_installed = {
+		"javascript",
 		"typescript",
 		"tsx",
 		"fish",
@@ -22,10 +23,6 @@ ts.setup {
 	autotag = {
 		enable = true,
 	},
-
-	playground = {
-		enable = true
-	}
 }
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()

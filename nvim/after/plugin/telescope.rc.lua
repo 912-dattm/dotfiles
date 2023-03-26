@@ -84,8 +84,8 @@ require("telescope").load_extension("fzf")
 
 vim.api.nvim_set_keymap(
 	"n",
-	"<leader>fs",
-	'<cmd>lua require("telescope.builtin").lsp_document_symbols()<cr>',
+	"<M-f>",
+	'<cmd>lua require("telescope.builtin").lsp_document_symbols({symbol_width = 50})<cr>',
 	{ noremap = true }
 )
 vim.cmd([[

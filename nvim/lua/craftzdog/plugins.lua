@@ -41,6 +41,8 @@ packer.startup(function(use)
 	use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
 	use 'williamboman/mason.nvim'
 	use 'williamboman/mason-lspconfig.nvim'
+	use 'ThePrimeagen/harpoon'
+	use 'folke/zen-mode.nvim'
 
 	use 'glepnir/lspsaga.nvim' -- LSP UIs
 	use 'L3MON4D3/LuaSnip'

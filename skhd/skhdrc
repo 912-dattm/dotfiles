@@ -1,0 +1,66 @@
+# changing window focus
+
+# change window focus within space
+shift + alt - j : yabai -m window --focus south
+shift + alt - k : yabai -m window --focus north
+shift + alt - h : yabai -m window --focus west
+shift + alt - l : yabai -m window --focus east
+
+
+# -- Modifying the Layout --
+
+# rotate layout clockwise
+shift + alt - r : yabai -m space --rotate 270
+
+# flip along y-axis
+shift + alt - y : yabai -m space --mirror y-axis
+
+# flip along x-axis
+shift + alt - x : yabai -m space --mirror x-axis
+
+# toggle window float
+shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+
+
+# -- Modifying Window Size --
+
+# move window and split
+ctrl + alt - j : yabai -m window --warp south
+ctrl + alt - k : yabai -m window --warp north
+ctrl + alt - h : yabai -m window --warp west
+ctrl + alt - l : yabai -m window --warp east
+
+# maximize a window
+shift + alt - m : yabai -m window --toggle zoom-fullscreen
+
+# balance out tree of windows (resize to occupy same area)
+shift + alt - e : yabai -m space --balance
+
+# craete space
+cmd - p : yabai -m space --create && \
+                   index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
+                   yabai -m window --space "${index}" && \
+                   yabai -m space --focus "${index}"
+
+
+# move window to prev and next space
+shift + alt - p : yabai -m window --space prev && yabai -m space --focus;
+shift + alt - n : yabai -m window --space next && yabai -m space --focus;
+
+# move window to space #
+shift + alt - 1 : yabai -m window --space 1 && yabai -m space --focus;
+shift + alt - 2 : yabai -m window --space 2 && yabai -m space --focus;
+shift + alt - 3 : yabai -m window --space 3 && yabai -m space --focus;
+shift + alt - 4 : yabai -m window --space 4 && yabai -m space --focus;
+shift + alt - 5 : yabai -m window --space 5 && yabai -m space --focus;
+shift + alt - 6 : yabai -m window --space 6 && yabai -m space --focus;
+shift + alt - 7 : yabai -m window --space 7 && yabai -m space --focus;
+
+
+# -- Starting/Stopping/Restarting Yabai --
+
+# stop/start/restart yabai
+ctrl + alt - q : brew services stop yabai
+ctrl + alt - s : brew services start yabai
+ctrl + alt - r : brew services restart yabai

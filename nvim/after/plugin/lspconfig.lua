@@ -41,8 +41,6 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	buf_set_keymap("n", "[g", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
 	buf_set_keymap("n", "]g", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
-	buf_set_keymap("n", "<Leader>o", ":TSLspOrganize<CR>", opts)
-	buf_set_keymap('n', '<Leader>p', '<cmd>:Prettier<CR>', opts)
 
 	buf_set_keymap(
 		"n",
@@ -102,7 +100,7 @@ nvim_lsp.tsserver.setup {
 	capabilities = capabilities
 }
 
-nvim_lsp.sumneko_lua.setup {
+nvim_lsp.lua_ls.setup {
 	capabilities = capabilities,
 	on_attach = function(client, bufnr)
 		on_attach(client, bufnr)
@@ -136,7 +134,7 @@ nvim_lsp.cssls.setup {
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 	vim.lsp.diagnostic.on_publish_diagnostics, {
-	underline = true,
+	underline = false,
 	update_in_insert = false,
 	virtual_text = { spacing = 4, prefix = "●" },
 	severity_sort = true,

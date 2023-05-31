@@ -4,10 +4,11 @@ if (not status) then
 	return
 end
 
---vim.cmd [[packadd packer.nvim]]
-
-packer.startup(function(use)
+local function plugins(use)
 	use 'wbthomason/packer.nvim'
+
+	-- Performance
+	use 'lewis6991/impatient.nvim'
 
 	use({
 		"kyazdani42/nvim-tree.lua",
@@ -17,7 +18,6 @@ packer.startup(function(use)
 	})
 
 	use({ "echasnovski/mini.nvim", branch = "stable" })
-	use 'lewis6991/impatient.nvim'
 	use("nathom/filetype.nvim")
 	use({
 		"phaazon/hop.nvim",
@@ -50,7 +50,7 @@ packer.startup(function(use)
 		'nvim-treesitter/nvim-treesitter',
 		run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
 	}
-	use 'windwp/nvim-ts-autotag'
+	use { 'windwp/nvim-ts-autotag' }
 	use 'kyazdani42/nvim-web-devicons' -- File icons
 	use 'nvim-telescope/telescope.nvim'
 	use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
@@ -61,6 +61,10 @@ packer.startup(function(use)
 
 	use 'lewis6991/gitsigns.nvim'
 	use 'dinhhuy258/git.nvim' -- For git blame & browse
-
 	use '~/.config/nvim/theme'
-end)
+end
+
+-- Performance
+pcall(require, "impatient")
+
+packer.startup(plugins)

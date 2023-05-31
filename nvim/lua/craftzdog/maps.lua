@@ -1,8 +1,8 @@
 local keymap = vim.keymap
 vim.g.mapleader = " "
 
-keymap.set("i", "<C-e>", "<C-o>$")
-keymap.set("i", "<C-a>", "<C-o>0")
+keymap.set("i", "<C-e>", "<ESC><S-a>")
+keymap.set("i", "<C-a>", "<ESC><S-i>")
 keymap.set('n', 'x', '"_x')
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 keymap.set("n", "<C-s>", ":wa<CR>")
@@ -24,6 +24,10 @@ keymap.set("n", "<leader>7", "7gt")
 keymap.set("n", "<leader>8", "8gt")
 keymap.set("n", "<leader>9", "9gt")
 keymap.set("n", "<leader>0", ":tablast<CR>")
+
+keymap.set("n", "<C-n>", ":MtaJumpToOtherTag<CR>")
+keymap.set("n", "<Leader>p", ":Prettier<CR>")
+keymap.set("n", "<Leader>o", ":TSLspOrganize<CR>")
 
 local function map(m, k, v)
 	vim.keymap.set(m, k, v, { silent = true })

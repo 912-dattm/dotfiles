@@ -1,7 +1,8 @@
-local status, mini_indentscope = pcall(require, "mini.indentscope")
-if (not status) then return end
+require('mini.cursorword').setup({
+	delay = 100
+})
 
-mini_indentscope.setup({
+require('mini.indentscope').setup({
 	mappings = {
 		goto_top = "<M-k>",
 		goto_bottom = "<M-j>",

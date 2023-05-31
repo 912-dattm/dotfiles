@@ -82,14 +82,11 @@ telescope.setup({
 
 require("telescope").load_extension("fzf")
 
-vim.api.nvim_set_keymap(
-	"n",
-	"<M-f>",
-	'<cmd>lua require("telescope.builtin").lsp_document_symbols({symbol_width = 50})<cr>',
-	{ noremap = true }
-)
-vim.cmd([[
-  nnoremap <silent><C-p> <cmd>Telescope find_files<cr>
-  nnoremap <silent><S-M-f> <cmd>Telescope live_grep<cr>
-  nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-]])
+local keymap = vim.keymap
+
+keymap.set("n", "<M-f>", '<cmd>lua require("telescope.builtin").lsp_document_symbols({symbol_width = 50})<cr>')
+keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>")
+keymap.set("n", "<S-M-f>", "<cmd>Telescope live_grep<cr>")
+keymap.set("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
+keymap.set("n", "<leader>fe",
+	'<cmd>lua require("telescope.builtin").diagnostics({severity = vim.diagnostic.severity.ERROR, hide_filename = false, get_all = true})<cr>')

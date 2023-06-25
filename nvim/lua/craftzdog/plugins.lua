@@ -61,7 +61,9 @@ local function plugins(use)
 
 	use 'lewis6991/gitsigns.nvim'
 	use 'dinhhuy258/git.nvim' -- For git blame & browse
+	use { "catppuccin/nvim", as = "catppuccin" }
 	use '~/.config/nvim/theme'
+	use({ 'rose-pine/neovim', as = 'rose-pine' })
 end
 
 -- Performance

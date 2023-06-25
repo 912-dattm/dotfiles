@@ -44,28 +44,22 @@ function M.groups(palette)
 		Error = { fg = palette.accent5 },
 		Todo = { fg = palette.accent6, bold = true, italic = true },
 		Include = { fg = palette.accent1 },
-
 		Cursor = { reverse = true },
 		CursorLineNr = { fg = palette.accent7, bg = palette.accent12, bold = true },
-
 		SignColumn = { fg = palette.accent7, bg = palette.accent12 },
-
 		Conceal = { fg = palette.comment },
 		CursorColumn = { bg = palette.accent0 },
 		CursorLine = { bg = palette.accent38 },
 		ColorColumn = { bg = palette.accent35 },
-
 		StatusLine = { fg = palette.accent7, bg = palette.accent0 },
 		StatusLineNC = { fg = palette.accent8 },
 		StatusLineTerm = { fg = palette.accent7, bg = palette.accent0 },
 		StatusLineTermNC = { fg = palette.accent8 },
-
 		Directory = { fg = palette.accent2 },
 		DiffAdd = { bg = "#2D4B33" },
 		DiffChange = { bg = "#474A49" },
 		DiffDelete = { bg = "#5C151A" },
 		DiffText = { fg = palette.accent8 },
-
 		ErrorMsg = { fg = palette.accent5 },
 		VertSplit = { fg = palette.accent0 },
 		Folded = { fg = palette.accent8 },
@@ -77,12 +71,10 @@ function M.groups(palette)
 		PmenuSel = { fg = palette.accent7, bg = palette.accent35 },
 		PmenuSbar = { bg = palette.accent0 },
 		PmenuThumb = { bg = palette.accent35 },
-
 		SpellBad = { fg = palette.accent5, underline = true },
 		SpellCap = { fg = palette.accent3 },
 		SpellLocal = { fg = palette.accent3 },
 		SpellRare = { fg = palette.accent3 },
-
 		TabLine = { fg = palette.accent7, bg = palette.accent20 },
 		TabLineSel = { fg = palette.accent20, bg = palette.accent2 },
 		TabLineFill = { fg = palette.accent20 },
@@ -92,9 +84,7 @@ function M.groups(palette)
 		WarningMsg = { fg = palette.accent3 },
 		WildMenu = { fg = palette.accent0, bg = palette.accent7 },
 		FloatBorder = { fg = palette.accent8 },
-
 		EndOfBuffer = { fg = palette.accent0 },
-
 		-- nvim-treesitter/nvim-treesitter
 		["@constructor"] = { fg = palette.accent32 },
 		["@tag"] = { fg = palette.accent1 },
@@ -108,10 +98,8 @@ function M.groups(palette)
 		TSPunctDelimiter = { fg = palette.accent7 },
 		TSPunctBracket = { fg = palette.accent7 },
 		TSPunctSpecial = { fg = palette.accent7 },
-
 		TSConstant = { fg = palette.accent2 },
 		TSConstantBuiltin = { fg = palette.accent2 },
-
 		TSConstMacro = { fg = palette.accent2 },
 		TSStringRegex = { fg = palette.accent2 },
 		TSString = { fg = palette.accent2 },
@@ -123,7 +111,6 @@ function M.groups(palette)
 		TSAnnotation = { fg = palette.accent7 },
 		TSAttribute = { fg = palette.accent7 },
 		TSNamespace = { fg = palette.accent3 },
-
 		TSFuncBuiltin = { fg = palette.accent3 },
 		TSFunction = { fg = palette.accent3 },
 		TSFuncMacro = { fg = palette.accent7 },
@@ -133,11 +120,9 @@ function M.groups(palette)
 		TSField = { fg = palette.accent7 },
 		TSProperty = { fg = palette.accent7 },
 		TSConstructor = { fg = palette.accent7 },
-
 		TSConditional = { fg = palette.accent1 },
 		TSRepeat = { fg = palette.accent1 },
 		TSLabel = { fg = palette.accent },
-
 		TSKeyword = { fg = palette.accent1 },
 		TSKeywordFunction = { fg = palette.accent1 },
 		TSKeywordOperator = { fg = palette.accent1 },
@@ -147,21 +132,17 @@ function M.groups(palette)
 		TSTypeBuiltin = { fg = palette.accent1 },
 		TSTypeQualifier = { fg = palette.accent1 },
 		TSTypeDefinition = { fg = palette.accent1 },
-
 		TSInclude = { fg = palette.accent1 },
 		TSVariable = { fg = palette.accent7 },
 		TSVariableBuiltin = { fg = palette.accent7 },
-
 		TSText = { fg = palette.accent7 },
 		TSStrong = { fg = palette.accent7, bold = true }, -- bold
 		TSEmphasis = { fg = palette.accent7, italic = true }, -- italic
 		TSUnderline = { fg = palette.accent7, underline = true }, -- underline
 		TSURI = { fg = palette.accent3, underline = true }, -- url
-
 		TSTag = { fg = palette.accent1 },
 		TSTagAttribute = { fg = palette.accent6 },
 		TSTagDelimiter = { fg = palette.accent7 },
-
 		-- lewis6991/gitsigns.nvim
 		GitSignsAdd = { fg = palette.accent4 },
 		GitSignsChange = { fg = palette.accent3 },
@@ -169,7 +150,6 @@ function M.groups(palette)
 		GitSignsAddLn = { fg = palette.accent0, bg = palette.accent4 },
 		GitSignsChangeLn = { fg = palette.accent0, bg = palette.accent4 },
 		GitSignsDeleteLn = { fg = palette.accent0, bg = palette.accent5 },
-
 		-- nvim-telescope/telescope.nvim
 		TelescopePromptBorder = { fg = palette.accent8 },
 		TelescopeResultsBorder = { fg = palette.accent8 },
@@ -179,7 +159,6 @@ function M.groups(palette)
 		TelescopePromptPrefix = { fg = palette.accent1 },
 		TelescopePromptCounter = { fg = palette.accent2 },
 		TelescopeSelection = { bg = palette.accent38 },
-
 		-- kyazdani42/nvim-tree.lua
 		NvimTreeNormal = { fg = palette.accent7, bg = palette.accent21 },
 		NvimTreeVertSplit = { fg = palette.accent12, bg = palette.accent12 },
@@ -195,11 +174,9 @@ function M.groups(palette)
 		NvimTreeCursorLine = { bg = palette.accent38 },
 		NvimTreeIn = { bg = palette.accent35 },
 		NvimTreeEndOfBuffer = { fg = palette.accent0 },
-
 		-- akinsho/bufferline.nvim
 		BufferLineIndicatorSelected = { fg = palette.accent1 },
 		BufferLineFill = { bg = palette.accent0 },
-
 		-- neovim/nvim-lspconfig
 		DiagnosticError = { fg = palette.accent5 },
 		DiagnosticWarn = { fg = palette.accent3 },
@@ -221,7 +198,6 @@ function M.groups(palette)
 		DiagnosticVirtualTextWarn = { fg = palette.accent3 },
 		DiagnosticVirtualTextInfo = { fg = palette.accent7, bg = palette.accent12 },
 		DiagnosticVirtualTextHint = { fg = palette.accent7, bg = palette.accent12 },
-
 		LspFloatWinBorder = { fg = palette.accent7, bg = "NONE" },
 		LspDiagnosticsDefaultError = { fg = palette.accent5 },
 		LspDiagnosticsDefaultWarning = { fg = palette.accent7, bg = palette.accent12 },
@@ -234,11 +210,9 @@ function M.groups(palette)
 		LspReferenceText = { fg = palette.accent3 },
 		LspReferenceRead = { fg = palette.accent3 },
 		LspReferenceWrite = { fg = palette.accent3 },
-
 		-- lukas-reineke/indent-blankline.nvim
 		IndentBlanklineChar = { fg = palette.accent8, nocombine = true },
 		IndentBlanklineContextChar = { fg = palette.accent7, nocombine = true },
-
 		-- hrsh7th/nvim-cmp
 		CmpItemKind = { link = "Pmenu" },
 		CmpItemAbbr = { link = "Pmenu" },
@@ -267,7 +241,6 @@ function M.groups(palette)
 		CmpItemKindConstant = { link = "TSConstant" },
 		CmpItemKindStruct = { link = "TSStructure" },
 		CmpItemKindTypeParameter = { link = "TSParameter" },
-
 		-- SmiteshP/nvim-navic
 		NavicIconsFile = { link = "CmpItemKindFile" },
 		NavicIconsModule = { link = "CmpItemKindModule" },
@@ -298,24 +271,20 @@ function M.groups(palette)
 		NavicIconsTypeParameter = { link = "CmpItemKindTypeParameter" },
 		NavicText = { fg = palette.accent8 },
 		NavicSeparator = { fg = palette.accent8 },
-
 		--typescript
 		typescriptImport = { fg = palette.accent1 },
 		typescriptIdentifierName = { fg = palette.accent7 },
-
 		--css
 		cssProp = { fg = palette.accent6, bg = "NONE" },
 		cssPseudoClass = { fg = palette.accent6, bg = "NONE" },
 		cssPseudoClassId = { fg = palette.accent6, bg = "NONE" },
 		cssNoise = { fg = palette.accent6, bg = "NONE" },
-
 		--less
 		lessCssAttribute = { fg = palette.accent1, bg = "NONE" },
 		lessVariable = { fg = palette.accent7, bg = "NONE" },
 		lessDefinition = { fg = palette.accent7, bg = "NONE" },
 		lessAmpersand = { fg = palette.accent6, bg = "NONE" },
 		lessProperty = { fg = palette.accent6, bg = "NONE" },
-
 		GitSignsCurrentLineBlame = { fg = palette.accent8 },
 	}
 end

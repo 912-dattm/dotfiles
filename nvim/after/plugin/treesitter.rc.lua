@@ -20,12 +20,5 @@ ts.setup {
 	},
 	autotag = {
 		enable = true,
-		--filetypes = {
-		--'html', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'tsx', 'jsx', 'rescript',
-		--'css', 'lua', 'xml', 'php', 'markdown'
-		--},
 	},
 }
-
---local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
---parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
